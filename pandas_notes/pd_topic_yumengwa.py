@@ -13,33 +13,19 @@
 #     name: python3
 # ---
 
-# ### My name: Yumeng Wang
-# ### My UM email: yumengwa@umich.edu
+# ## Topic: Working with missing data
+# My name: Yumeng Wang    
+# My UM email: yumengwa@umich.edu
 
-# +
-import pickle
-import random
-
-import numpy as np
-import pandas as pd
-import matplotlib.cm as cm
-import matplotlib.pyplot as plt
-
-from scipy import stats
-from scipy.stats import chi2_contingency
-from scipy.stats import binom, norm
-from confidence_interval import ci_mean, ci_prop
-# -
-
-# ## Question 0
-
-# ## Working with missing data
-#
 # ### Detecting
 # - use `.isnull()` to detecte missing values
 # - use `.notnull()` to detecte non-null values
 #
 # ### Example
+
+# +
+import numpy as np
+import pandas as pd
 
 df = pd.DataFrame(
     [[1, np.nan, 3], [np.nan, 5, 6], [7, 8, np.nan], [10, 11, 12]], 
@@ -47,6 +33,7 @@ df = pd.DataFrame(
     columns=["0", "1", "2"]
 )
 df
+# -
 
 df.isnull()
 
